@@ -9,5 +9,6 @@
   <a class="itemnav" href="/gestionUsers">Gestion Users</a>
   <?php else:?>
     <a class="itemnav" href="/catalogo">Catalogo</a>
+  <a class="itemnav" href="/userAlquiler">Mis Alquileres</a>
   <?php endif;?>
 </nav>

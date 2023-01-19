@@ -1,7 +1,7 @@
 <?php
 
   namespace App;
-// rejhistro dhe servisio
+
   final class Container{
 
     protected static $services=[];

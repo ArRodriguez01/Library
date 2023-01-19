@@ -6,7 +6,7 @@ use App\Controller;
   final class CatalogoController extends Controller{
     public function __contruct(Request $request,Session $session){
      parent::__construct($request,$session);
-    }
+    }  
     public function index(){
       $titol="index";
       parent::inventory('catálogo');

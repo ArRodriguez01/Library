@@ -1,5 +1,5 @@
 <?php 
-//que no nos sale como al toni
+
   namespace App;
 
   final class Request{

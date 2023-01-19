@@ -17,8 +17,7 @@ use App\Controller;
       echo "error";
     }
     public function delete(){
-      parent::remove('users
-','idUser');
+      parent::remove('users','idUser');
       $this->redirect('/gestionUsers');
     }
   }

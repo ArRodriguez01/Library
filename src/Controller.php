@@ -27,9 +27,6 @@
       Session::set($table,$result);
       
     }
-    public function remove($table,$key){
-      $value=intval($this->request->getParams());
-      $result=$this->qb->delete($table,$value,$key);
-    }
+
     
   }

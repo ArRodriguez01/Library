@@ -17,14 +17,12 @@ use App\Controller;
     }
     public function add(){
       $ISBN=$this->request->post('ISBN');
-
       $título=$this->request->post('titulo');
       $editorial=$this->request->post('editorial');
       $edición=$this->request->post('edicion');
       $autor=$this->request->post('autor');
       $img=$this->request->post('img');
       $data= ["ISBN"=>$ISBN,"título"=>$título,"editorial"=>$editorial,"edición"=>$edición,"autor"=>$autor,"url"=>$img];
-      
       $result=$this->qb->insert("catálogo",$data);
       $this->redirect('/gestionLibros');
       

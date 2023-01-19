@@ -46,8 +46,17 @@
       $this->stmt->execute();
       return $this;
     }
+    function ejecutar(){
+      $this->stmt=$this->pdo->query($sql);
+      $this->stmt->execute();
+      return $this;
+    }
     function fetch(){
       $rows=$this->stmt->fetchAll(\PDO::FETCH_OBJ);
+      return $rows;
+    }
+    function fetcharray(){
+      $rows=$this->stmt->fetchAll(\PDO::FETCH_ASSOC);
       return $rows;
     }
     function delete($table,$value,$key){
@@ -83,14 +92,20 @@
                       $columns.='`'.$column.'`,';
                       $bindv.='?,';
                       $values[]=$value;
+                   
+                
                   }
+                
                   $columns=substr($columns,0,-1);
                   $bindv=substr($bindv,0,-1);
   
                   $sql="INSERT INTO {$table}({$columns}) VALUES ({$bindv})";
+                     
+                
                       try{
                           $stmt=$this->query($sql);
                           $stmt->execute($values);
+                       
                           return $this->pdo->lastInsertId();
                       }catch(\PDOException $e){
                           echo $e->getMessage();
@@ -100,5 +115,5 @@
                   return true;
                   }
                   return false;
-              }
+              } 
   }

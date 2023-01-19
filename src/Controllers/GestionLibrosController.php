@@ -22,5 +22,5 @@ use App\Controller;
       parent::remove('catálogo','ISBN');
       $this->redirect('/gestionLibros');
     }
-    
+  
   }

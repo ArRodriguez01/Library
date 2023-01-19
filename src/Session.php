@@ -18,11 +18,11 @@
         }
     
         /**
-         * Gets a session value associated with the specified key.
+         * Obtener session con esa key
          *
-         * @param string $key
          *
-         * @return mixed|null Returns the value on success. NULL if the key doesn't exist.
+         *
+         * 
          */
         public static function get($key) {
             if(array_key_exists($key, $_SESSION)) {
@@ -32,10 +32,9 @@
         }
     
         /**
-         * Set a new session elements or update an existing one.
+         * Settear nueva session o actualizar
          *
-         * @param string $key
-         * @param mixed  $value
+         * 
          */
         public function set($key, $value) {
             $_SESSION[$key] = $value;
@@ -47,11 +46,11 @@
         }
     
         /**
-         * Deletes a session element.
+         * Borra 1 elemento de la sesion
          *
-         * @param string $key
+         * 
          *
-         * @return bool
+         * 
          */
         public function delete($key) {
             if(array_key_exists($key, $_SESSION)) {
@@ -62,11 +61,11 @@
         }
     
         /**
-         * Determines if a session key exists.
+         * Determinar si la sesion con esa key existe
          *
-         * @param string $key
+         * 
          *
-         * @return bool
+         * 
          */
         public function exists($key) {
             return array_key_exists($key, $_SESSION);
