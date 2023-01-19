@@ -10,17 +10,15 @@ ENGINE = InnoDB;
 -- Table `catálogo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `catálogo` (
-  `ISBN` INT(13) NOT NULL,
+  `ISBN` INT(11) NOT NULL,
   `título` VARCHAR(200) NOT NULL,
   `editorial` VARCHAR(30) NOT NULL,
   `edición` INT NOT NULL,
   `autor` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`ISBN`),
-  CONSTRAINT `autor`
-    REFERENCES `autores` (`idAutor`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  `url` VARCHAR(250) NOT NULL,
+  PRIMARY KEY (`ISBN`)
+    )
+ENGINE = InnoDB
 
 
 -- -----------------------------------------------------
